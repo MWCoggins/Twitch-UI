@@ -1,0 +1,183 @@
+/* General CSS */
+body {
+  background-color: transparent;
+  font-family: cursive;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+}
+
+div {
+  display: inline-block;
+}
+
+/* Container CSS */
+.container {
+  position: relative;
+  padding: 5% 5%;
+  top: -400px;
+  left: 100px;
+  overflow: hidden;
+  animation-name: fade;
+  animation-duration: 12s;
+  animation-delay: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  z-index: 2;
+}
+
+.character-container {
+  position: relative;
+  top: 50px;
+  left: -150px;
+  height: 200px;
+  width: 200px;
+  z-index: 1;
+}
+
+/* Images CSS */
+.blackcat {
+  display: inline-block;
+  position: relative;
+  top: -204px;
+  z-index: 1;
+  height: 200px;
+  width: 200px;
+}
+
+.blackcat-wink {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  height: 200px;
+  width: 200px;
+  animation-name: chfade;
+  animation-duration: 12s;
+  animation-delay: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+/* CSS text bubble */
+.text-bubble {
+  margin: 1em;
+  display: inline-block;
+  position: relative;
+  width: 17em;
+  height: 8em;
+  background-color: rgb(255, 255, 240);
+  animation: float 2s ease-in-out infinite;
+}
+
+.border {
+  border: .3em solid rgb(20, 20, 20);
+}
+
+.round {
+  border-radius: 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+}
+
+/* Right triangle, left side slightly up */
+.tri-right.border.left-bottom:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -2.1em;
+	right: auto;
+  top: 56%;
+	bottom: auto;
+	border: 30px solid;
+	border-color: transparent transparent rgb(20, 20, 20) transparent;
+}
+.tri-right.left-bottom:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -1.5em;
+	right: auto;
+  top: 61%;
+	bottom: auto;
+	border: 25px solid;
+	border-color: transparent transparent rgb(255, 255, 240) transparent;
+}
+
+/* content CSS */
+.content {
+  padding: 1em;
+}
+
+/* text CSS */
+.text1 {
+  margin: auto;
+  padding: 1em;
+  position: relative;
+  top: 0.5em;
+  text-align: center;
+  animation-name: fade;
+  animation-duration: 4s;
+  animation-delay: 11s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.text2 {
+  margin: auto;
+  padding: 1em;
+  position: relative;
+  top: -5.6em;
+  text-align: center;
+  animation-name: fade;
+  animation-duration: 5s;
+  animation-delay: 16s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+/* Animation CSS */
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 5px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 10px 10px 0px rgba(0,0,0,0.2);
+		transform: translatey(-5px);
+	}
+	100% {
+		box-shadow: 0 5px 5px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes chfade {
+  0% {
+    opacity: 0;
+  }
+  5%, 95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
